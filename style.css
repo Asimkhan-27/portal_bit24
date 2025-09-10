@@ -1,0 +1,152 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f0f2f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #2d6a4f, #40916c, #52b788);
+  color: white;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Container */
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Main content (left) */
+.main-content {
+  flex: 2;
+}
+
+.main-content h2 {
+  margin-bottom: 15px;
+  color: #2d6a4f;
+}
+
+/* Sidebar (right) */
+.sidebar {
+  flex: 1;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.sidebar h2 {
+  color: #40916c;
+  margin-top: 0;
+}
+
+.card {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border-left: 5px solid #2d6a4f;
+}
+
+/* Expandable Sections */
+.section {
+  margin-bottom: 15px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.section-header {
+  background: linear-gradient(135deg, #2d6a4f, #40916c);
+  color: white;
+  padding: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.05rem;
+}
+
+.section-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 18px;
+  background: #f8f9fa;
+}
+
+.section-content.active {
+  max-height: 600px;
+  padding: 18px;
+}
+
+.section-content ul {
+  list-style: none;
+}
+
+.section-content li {
+  margin: 10px 0;
+}
+
+.section-content a {
+  text-decoration: none;
+  color: #1b4332;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.section-content a:hover {
+  color: #2d6a4f;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  background: #2d6a4f;
+  color: white;
+  font-size: 0.95rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -3px 8px rgba(0,0,0,0.1);
+  opacity: 0.95;
+}
